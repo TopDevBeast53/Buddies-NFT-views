@@ -12,6 +12,7 @@ const NFTBalances = () => {
     address: data?.user?.address,
     chain: chain?.id,
   });
+  const filteraddress = "0x8b633f357e590f726642ec8eccab0c1a56dbe4be"
 
   useEffect(() => console.log('nfts: ', nfts), [nfts]);
 
@@ -23,7 +24,9 @@ const NFTBalances = () => {
       {nfts?.length ? (
         <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
           {nfts.map((nft, key) => (
-            <NFTCard nft={nft} key={key} />
+              nft.tokenAddress.lowercase == filteraddress && (
+                <NFTCard nft={nft} key={key} />
+              )
           ))}
         </Grid>
       ) : (
