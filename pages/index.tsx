@@ -8,7 +8,6 @@ const HomePage: NextPage = () => {
     <Default pageName="Home">
       {/* <Home /> */}
       <NFTBalances />
-
     </Default>
   );
 };
