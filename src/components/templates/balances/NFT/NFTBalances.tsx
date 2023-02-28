@@ -23,7 +23,7 @@ const NFTBalances = () => {
       </Heading>
       {nfts?.length ? (
         <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
-          {nfts.map((nft, key) => nft.tokenAddress.lowercase == filteraddress && <NFTCard nft={nft} key={key} />)}
+          {nfts.map((nft, key) => nft.tokenAddress.lowercase === filteraddress && <NFTCard nft={nft} key={key} />)}
         </Grid>
       ) : (
         <Box>Looks Like you do not have any NFTs</Box>
