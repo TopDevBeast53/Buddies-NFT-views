@@ -12,7 +12,7 @@ const NFTBalances = () => {
     address: data?.user?.address,
     chain: chain?.id,
   });
-  const filteraddress = '0x8b633f357e590f726642ec8eccab0c1a56dbe4be';
+  const filteraddress = '0xfd50b5209406bda672879c1a9be0d8765fa6b31e';
 
   useEffect(() => console.log('nfts: ', nfts), [nfts]);
 
